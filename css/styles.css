@@ -106,7 +106,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  /*height: 50px;*/
   background-color: #3397DB;
   align-items: center;
 }
@@ -205,7 +205,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -272,4 +272,106 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Custom CSS - Project */
+footer {
+  clear: both;
+}
+
+.inside header {
+  right: 0;
+  left: 0;
+}
+.filter-options {
+  padding: 1em 0;
+  margin: 0 auto;
+}
+
+
+
+#restaurants-list li {
+  display: inline-block;
+}
+
+
+
+@media screen and (max-width: 840px) {
+  .clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .wrapper {
+    min-width: 320px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  #neighorhoods-select {
+    clear: both;
+  }
+  #cuisines-select {
+    float: left;
+  }
+
+  #breadcrumb {
+    padding: 0;
+    width: initial;
+    padding: 10px 5px;
+  }
+
+
+  .inside #map-container {
+    position: initial;
+    top: initial;
+    right: initial;
+    height: initial;
+    float: left;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #restaurant-container {
+    clear: both;
+    padding: 0;
+    width: initial;
+  }
+
+  #restaurant-img, #restaurant-cuisine {
+    width: 100%;
+  }
+
+  #restaurant-container .wrapper, #reviews-container .wrapper {
+    padding: 10px;
+  }
+
+
+  #reviews-container {
+    padding: 0;
+    padding: 10px 0;
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+
+  #reviews-list li {
+    padding: 10px;
+    position: initial;
+    width: initial;
+    text-align: left;
+  }
+
+  #reviews-list {
+    padding: 10px;
+  }
+
+  .inside #footer {
+    bottom: initial;
+    position: initial;
+    width: initial;
+  }
 }
