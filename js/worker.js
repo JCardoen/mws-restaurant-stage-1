@@ -1,4 +1,4 @@
-const cacheName = 'restaurants-cache-v1';
+const cacheName = 'restaurants-cache-v2';
 
 // Listen for install event, set callback
 self.addEventListener('install', function (event) {
@@ -7,10 +7,12 @@ self.addEventListener('install', function (event) {
         caches.open(cacheName).then(function (cache) {
             return cache.addAll(
                 [
-                    '/css/styles.css',
-                    '/js/dbhelper.js',
-                    '/js/main.js',
+                    '/css/*',
+                    '/img/*',
+                    '/js/*',
+                    '/data/*',
                     '/index.html',
+                    '/restaurant.html'
                 ]
             );
         })

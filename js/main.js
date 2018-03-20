@@ -161,6 +161,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.classList = 'restaurant-link';
+
   li.append(more)
 
   return li
@@ -192,3 +194,4 @@ if ('serviceWorker' in navigator) {
       console.log('Service worker registration failed, error:', error);
     });
 }
+
