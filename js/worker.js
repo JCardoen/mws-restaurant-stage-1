@@ -1,4 +1,4 @@
-const cacheName = 'restaurants-cache-v3';
+const cacheName = 'restaurants-cache-v4';
 
 // Listen for install event, set callback
 self.addEventListener('install', function (event) {
@@ -11,7 +11,7 @@ self.addEventListener('install', function (event) {
                     '/data/restaurants.json',
                     '/js/dbhelper.js',
                     '/js/main.js',
-                    '/js/restarurant_info.js',
+                    '/js/restaurant_info.js',
                     '/restaurant.html',
                     '/img/1.jpg',
                     '/img/2.jpg',
@@ -26,7 +26,7 @@ self.addEventListener('install', function (event) {
                     '/index.html',
                 ]
             );
-        })
+        }).catch(() => console.log('ERROR'))
     );
 });
 
@@ -39,14 +39,5 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-    // Delete previous caches
-    event.waitUntil(
-        caches.keys().then(keyList => {
-            return Promise.all(keyList.map(key => {
-                if (key !== cacheName) {
-                    return caches.delete(key);
-                }
-            }))
-        })
-    )
+    
 });

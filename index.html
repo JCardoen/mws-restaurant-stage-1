@@ -22,19 +22,19 @@
   <main id="maincontent">
     <section id="map-container">
       <h2 class="structural">Map view of all restaurants</h2>
-      <div id="map" role="complimentary"></div>
+      <div id="map" role="application"></div>
     </section>
     <section class="wrapper clearfix">
       <div class="filter-options clearfix">
         <h2>Filter Results</h2>
         <div class="field">
-          <label for="neighborhoods">Pick a neighborhood</label>
+          <label for="neighborhoods-select">Pick a neighborhood</label>
           <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
           </select>
         </div>
         <div class="field">
-          <label for="cuisines">Choose a cuisine</label>
+          <label for="cuisines-select">Choose a cuisine</label>
           <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
             <option value="all">All Cuisines</option>
           </select>
