@@ -33,7 +33,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         cashes.match(event.request).then(function(response) {
-            return response || tch(event.request);
+            return response || fetch(event.request);
         })
     );
 });
